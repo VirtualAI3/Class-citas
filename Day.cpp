@@ -42,6 +42,6 @@ Entry Day::GetNextItem()
 }
 bool Day::TimeFree(Time time)
 {
-    Entry entry(" "," "," ",time.Hours(),time.Minutes());
+    Entry entry(" "," "," ",time.Hours(),time.Minutes(),time.Seconds());
     return !(list.IsPresent(entry));
 }

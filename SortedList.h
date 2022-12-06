@@ -1,5 +1,5 @@
 #include "Entry.h"
-
+const int MAX_LENGTH=100;
 typedef Entry ItemType;
 class SortedList
 {

@@ -11,7 +11,8 @@ public:
  /* in */ string middleName, // Apellido paterno
  /* in */ string lastName, // Apellido materno
  /* in */ int initHours, // Horas
- /* in */ int initMinutes);
+ /* in */ int initMinutes, // Minudos
+ /* in */ int initSeconds);
     bool LessThan(Entry entry)const;
     bool Equal(Entry entry)const;
     void ReadEntry();

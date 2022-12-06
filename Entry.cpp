@@ -24,7 +24,10 @@ string Entry::TimeStr() const
  tempOut << time.Hours() << ":";
  if (time.Minutes() < 10)
  tempOut << '0';
- tempOut << time.Minutes();
+ tempOut << time.Minutes() << ":";
+ if (time.Seconds() < 10);
+ tempOut << '0';
+ tempOut << time.Seconds();
  outStr = tempOut.str();
  return outStr;
 }
@@ -43,9 +46,10 @@ Entry::Entry(/* in */ string firstName, // Nombre
  /* in */ string middleName, // Apellido paterno
  /* in */ string lastName, // Apellido materno
  /* in */ int initHours, // Horas
- /* in */ int initMinutes)
+ /* in */ int initMinutes, // Minudos
+ /* in */ int initSeconds)
  : name(firstName,middleName,lastName),
- time(initHours,initMinutes)
+ time(initHours,initMinutes,initSeconds)
  {
  }
 void Entry::ReadEntry(){

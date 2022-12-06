@@ -4,9 +4,9 @@ using namespace std;
 int main()
 {
  Entry nameTime;
- Time time(10,30);
+ Time time(10,30,0);
  Date date;
- date.Set(11, 7, 2022); // Establecer la fecha en 12 3 2004
+ date.Set(12, 3, 2004); // Establecer la fecha en 12 3 2004
  Day day(date, 5); // Establecer el día en la fecha con citas
  SortedList list;
  for (int count = 1; count <= 3; count++)
@@ -29,18 +29,18 @@ int main()
  // El elemento está en la lista
  if (day.TimeFree(time))
  cout << time.Hours() << ":" << time.Minutes()
- << " esta libre." << endl;
+ << " está libre." << endl;
  else
  cout << time.Hours() << ":" << time.Minutes()
- << " no esta libre. " << endl;
+ << " no está libre. " << endl;
  // El elemento no está en la lista
- time.Set(0,0);
+ time.Set(0,0,0);
  if (day.TimeFree(time))
  cout << time.Hours() << ":" << time.Minutes()
- <<" esta libre." << endl;
+ <<" está libre." << endl;
  else
  cout << time.Hours() << ":" << time.Minutes()
- << " no esta libre. " << endl;
+ << " no está libre. " << endl;
  // Borrar e iterar a través de la lista, imprimir los elementos
  day.Delete(nameTime);
  day.ResetEntries(); // Preparar para iteración
